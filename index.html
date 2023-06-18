@@ -1,179 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Slick CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <!-- Slick theme CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <style>
-        body {
-            background-color: rgb(24, 142, 220);
-        }
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+  <style>
+    .card {
+      width: 2500px;
+      height: 200px;
+      background-color: #ccc;
+      margin: 20px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
 
-        .carousel-container {
-            max-width: 1200px; /* Adjust the maximum width as per your requirement */
-            margin: 0 auto;
-        }
+    .card.slick-active {
+      transform: scale(1.1);
+    }
 
-        .responsive {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Adjust the gap between images */
-            margin: 20px;
-            overflow: hidden; /* Ensure the buttons are visible within the container */
-        }
-
-        .responsive .card {
-            flex: 0 0 calc((100% - 5 * 20px) / 6);
-            height: 200px;
-            border: none;
-            background-color: transparent;
-            transition: transform 0.5s ease;
-            position: relative;
-        }
-
-        .responsive .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .responsive .card .text-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: #000;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            pointer-events: none;
-        }
-
-        .responsive .card:hover .text-overlay {
-            opacity: 1;
-        }
-
-        .responsive .card .text-overlay h4 {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0;
-            color: #fff;
-        }
-
-        .responsive .slick-slide:not(.slick-current) {
-            transform: scale(0.8);
-            z-index: 1;
-        }
-
-        /* Adjust the style of the navigation buttons */
-        .slick-prev,
-        .slick-next {
-            display: none;
-        }
-
-        @media (max-width: 767px) {
-            /* Hide the carousel on screens smaller than 768px (mobile devices) */
-            .carousel-container {
-                display: none;
-            }
-        }
-    </style>
+    .text-overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      color: #fff;
+      font-size: 24px;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="carousel-container">
-                    <div class="responsive">
-                        <div class="card">
-                            <a href="https://solestockeruk.com/collections/nike-air-jordan">
-                                <img src="https://i.ibb.co/gtkHpYp/1.png" alt="">
-                                <div class="text-overlay">
-                                    <h4>Image 1</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card">
-                            <a href="https://solestockeruk.com/collections/yeezy-1">
-                                <img src="https://i.ibb.co/0sz9PQc/2.png" alt="">
-                                <div class="text-overlay">
-                                    <h4>YEEZY</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card">
-                            <a href="https://solestockeruk.com/collections/nike-dunks">
-                                <img src="https://i.ibb.co/b1X8nWq/3.png" alt="">
-                                <div class="text-overlay">
-                                    <h4>DUNKS</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card">
-                            <a href="https://solestockeruk.com/collections/catalog">
-                                <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/pexels-cristiano-de-luca-10963373.jpg?v=1686177617&amp;width=750" alt="">
-                                <div class="text-overlay">
-                                    <h4>Image 2</h4>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="responsive">
+    <div class="card" style="background-image: url('https://i.ibb.co/b1X8nWq/3.png')">
+      <a href="https://solestockeruk.com/collections/nike-dunks">
+        <div class="text-overlay">
+          <h4>DUNKS</h4>
         </div>
+      </a>
     </div>
+    <div class="card" style="background-image: url('https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/pexels-cristiano-de-luca-10963373.jpg?v=1686177617&amp;width=750')">
+      <a href="https://solestockeruk.com/collections/catalog">
+        <div class="text-overlay">
+          <h4>Image 2</h4>
+        </div>
+      </a>
+    </div>
+    <div class="card" style="background-image: url('https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/pexels-cristiano-de-luca-10963373.jpg?v=1686177617&amp;width=750')">
+      <a href="https://solestockeruk.com/collections/catalog">
+        <div class="text-overlay">
+          <h4>Image 3</h4>
+        </div>
+      </a>
+    </div>
+  </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- Slick JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.responsive').slick({
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 4,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3,
-                            centerPadding: '30px',
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                            centerPadding: '20px',
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            centerPadding: '20px',
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $('.responsive').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      autoplay: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+            
+          }
+        }
+      ]
+    });
+  </script>
 </body>
-
 </html>
